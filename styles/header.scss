@@ -1,0 +1,35 @@
+.header {
+  padding-top: 30px;
+
+  .container {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.navigation {
+  flex-grow: 1;
+
+  &__list {
+    display: flex;
+  }
+
+  &__link {
+    color: #fff;
+    opacity: 0.6;
+    margin-right: 20px;
+    transition-duration: 0.3s;
+    font-size: 1.1rem;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  @media (max-width: 450px) {
+    &__link {
+      margin-right: 10px;
+      font-size: 0.8rem;
+    }
+  }
+}
