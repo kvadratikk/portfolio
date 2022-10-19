@@ -14,12 +14,7 @@ const Intro = () => {
             Contact me
           </a>
         </div>
-        <Image
-          src={avatar}
-          alt='my photo'
-          className='intro__avatar'
-          width={362}
-        />
+        <Image src={avatar} alt='my photo' className='intro__avatar' width={362} priority={true} />
       </div>
     </section>
   )
