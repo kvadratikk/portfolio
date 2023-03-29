@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react'
 
-export const useWindowSize = () => {
+export default function useWindowSize() {
   const [size, setSize] = useState([0, 0])
+
   useEffect(() => {
     function updateSize() {
       setSize([window.innerWidth, window.innerHeight])
@@ -10,5 +11,6 @@ export const useWindowSize = () => {
     updateSize()
     return () => window.removeEventListener('resize', updateSize)
   }, [])
+
   return size
 }
