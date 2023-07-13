@@ -8,7 +8,6 @@
   }
 
   &__item {
-    transition-duration: 0.3s;
     background-color: #3d3e42;
     padding: 40px;
     text-align: center;
@@ -17,18 +16,13 @@
     opacity: 0;
     left: -20px;
 
-    @for $i from 1 through 20 {
-      &:nth-child(#{$i + 1}) {
-        transition-delay: #{$i * 0.1s};
-      }
-    }
-
     p {
       margin-top: 10px;
     }
 
     img {
-      max-width: 60px !important;
+      max-height: 60px;
+      max-width: 60px;
     }
   }
 }

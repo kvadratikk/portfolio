@@ -8,21 +8,6 @@
     opacity: 0;
     transition-duration: 0.3s;
     position: relative;
-    top: -50px;
-
-    @for $i from 1 through 20 {
-      &:nth-child(#{$i + 1}) {
-        transition-delay: #{$i * 0.3s};
-      }
-    }
-
-    @for $i from 1 through 20 {
-      &:nth-child(#{$i + 1}) {
-        .experience__line {
-          transition-delay: #{($i * 0.3s)};
-        }
-      }
-    }
   }
 
   &__date {
@@ -69,7 +54,6 @@
     margin-left: 14px;
     margin-top: 30px;
     margin-bottom: 30px;
-    transition-duration: 0.3s;
     max-height: 0;
   }
 
@@ -92,7 +76,6 @@
 
   &__certificate {
     display: block;
-    transition-duration: 0.3s;
     color: #fff;
     opacity: 0.55;
     line-height: 1.1rem;
