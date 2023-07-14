@@ -1,5 +1,6 @@
-import codewars from '../../assets/images/codewars.svg';
 import Image from 'next/image';
+
+import codewars from '../assets/images/codewars.svg';
 
 const About = () => {
   return (

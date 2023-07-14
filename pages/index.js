@@ -1,14 +1,15 @@
 import { useEffect } from 'react';
+
 import Head from 'next/head';
 
-import Header from './components/Header';
-import Intro from './components/Intro';
-import About from './components/About';
-import Skills from './components/Skills/Skills';
-import Portfolio from './components/Portfolio/Portfolio';
-import Experience from './components/Experience';
-import Contact from './components/Contact';
-import Footer from './components/Footer';
+import Header from '../components/Header';
+import Intro from '../components/Intro';
+import About from '../components/About';
+import Skills from '../components/Skills/Skills';
+import Portfolio from '../components/Portfolio/Portfolio';
+import Experience from '../components/Experience';
+import Contact from '../components/Contact';
+import Footer from '../components/Footer';
 
 export default function Home() {
   useEffect(() => {

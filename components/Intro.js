@@ -1,5 +1,6 @@
 import Image from 'next/image';
-import avatar from '../../assets/images/myphoto.webp';
+
+import avatar from '../assets/images/myphoto.webp';
 
 const Intro = () => {
   return (
