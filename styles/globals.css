@@ -3,14 +3,6 @@
 @tailwind utilities;
 @tailwind variants;
 
-.translate-z-0 {
-  transform: translateZ(0px);
-}
-
-.swiper-wrapper {
-  display: flex !important;
-}
-
 .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
 .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
   background-color: #f13024;

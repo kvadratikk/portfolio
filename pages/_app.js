@@ -7,6 +7,9 @@ import Transition from '../components/Transition/Transition';
 
 import '../styles/globals.css';
 
+import 'swiper/css';
+import 'swiper/css/pagination';
+
 function MyApp({ Component, pageProps }) {
   const { route } = useRouter();
 
