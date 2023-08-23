@@ -225,7 +225,12 @@ const Projects = () => {
             </Animated>
           </div>
 
-          <Animated direction="down" duration={0.6} element="div" className="w-full xl:max-w-[65%]">
+          <Animated
+            direction="down"
+            duration={0.6}
+            element="div"
+            className="w-full xl:max-w-[65%] overflow-hidden"
+          >
             <Swiper
               className="h-[200px] sm:h-[500px]"
               spaceBetween={10}
