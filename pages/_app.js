@@ -1,4 +1,5 @@
 import Layout from '../components/Layout/Layout';
+import Head from 'next/head';
 
 import { AnimatePresence, motion } from 'framer-motion';
 import { useRouter } from 'next/router';
@@ -15,6 +16,10 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <Layout>
+      <Head>
+        <title>Uladzisalava Ryzhova</title>
+        <link rel="icon" href="/icons/favicon.ico" sizes="any" />
+      </Head>
       <AnimatePresence mode="wait">
         <motion.div key={route} className="h-full">
           <Transition />
