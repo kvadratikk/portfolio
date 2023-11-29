@@ -29,6 +29,34 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 
 const projectsSlides = [
   {
+    title: 'clevertec',
+    link: 'https://websitetest.clevertech.by/',
+    images: [
+      {
+        title: 'slider',
+        path: '/images/projects/clevertec/slider.jpg',
+      },
+      {
+        title: 'tabs',
+        path: '/images/projects/clevertec/tabs.jpg',
+      },
+      {
+        title: 'hover-list',
+        path: '/images/projects/clevertec/hover-list.jpg',
+      },
+      {
+        title: 'mobile',
+        path: '/images/projects/clevertec/mobile.jpg',
+      },
+    ],
+    stack: [
+      <SiNextdotjs key='Next.js' />,
+      <SiTypescript key='TypeScript' />,
+      <FaSass key='SASS' />,
+      <SiSwiper key='Swiper' />,
+    ],
+  },
+  {
     title: 'portfolio',
     link: 'https://storied-queijadas-0d80ee.netlify.app/',
     images: [
@@ -50,10 +78,10 @@ const projectsSlides = [
       },
     ],
     stack: [
-      <SiNextdotjs key="Next.js" />,
-      <SiTailwindcss key="Tailwind" />,
-      <SiSwiper key="Swiper" />,
-      <TbBrandFramerMotion key="Framer-Motion" />,
+      <SiNextdotjs key='Next.js' />,
+      <SiTailwindcss key='Tailwind' />,
+      <SiSwiper key='Swiper' />,
+      <TbBrandFramerMotion key='Framer-Motion' />,
     ],
   },
   {
@@ -78,14 +106,14 @@ const projectsSlides = [
       },
     ],
     stack: [
-      <SiTypescript key="TypeScript" />,
-      <FaReact key="React" />,
-      <SiRedux key="Redux Toolkit" />,
-      <SiReacthookform key="React Hook Form" />,
-      <SiAxios key="Axios" />,
-      <SiSwiper key="Swiper" />,
-      <FaSass key="SASS" />,
-      <SiCypress key="Cypress" />,
+      <SiTypescript key='TypeScript' />,
+      <FaReact key='React' />,
+      <SiRedux key='Redux Toolkit' />,
+      <SiReacthookform key='React Hook Form' />,
+      <SiAxios key='Axios' />,
+      <SiSwiper key='Swiper' />,
+      <FaSass key='SASS' />,
+      <SiCypress key='Cypress' />,
     ],
   },
   {
@@ -110,9 +138,9 @@ const projectsSlides = [
       },
     ],
     stack: [
-      <FaHtml5 key="HTML5" />,
-      <SiTypescript key="TypeScript" />,
-      <SiGreensock key="GreenSock" />,
+      <FaHtml5 key='HTML5' />,
+      <SiTypescript key='TypeScript' />,
+      <SiGreensock key='GreenSock' />,
     ],
   },
   {
@@ -137,14 +165,14 @@ const projectsSlides = [
       },
     ],
     stack: [
-      <FaReact key="React" />,
-      <SiRedux key="Redux" />,
-      <SiReacthookform key="React Hook Form" />,
-      <SiAxios key="Axios" />,
-      <FaNodeJs key="Node.js" />,
-      <SiExpress key="Express" />,
-      <SiMongodb key="Mongoose" />,
-      <SiMui key="MaterialUI" />,
+      <FaReact key='React' />,
+      <SiRedux key='Redux' />,
+      <SiReacthookform key='React Hook Form' />,
+      <SiAxios key='Axios' />,
+      <FaNodeJs key='Node.js' />,
+      <SiExpress key='Express' />,
+      <SiMongodb key='Mongoose' />,
+      <SiMui key='MaterialUI' />,
     ],
   },
   {
@@ -169,11 +197,11 @@ const projectsSlides = [
       },
     ],
     stack: [
-      <SiTypescript key="TypeScript" />,
-      <FaReact key="React" />,
-      <SiRedux key="Redux Toolkit" />,
-      <SiReacthookform key="React Hook Form" />,
-      <SiJest key="Jest" />,
+      <SiTypescript key='TypeScript' />,
+      <FaReact key='React' />,
+      <SiRedux key='Redux Toolkit' />,
+      <SiReacthookform key='React Hook Form' />,
+      <SiJest key='Jest' />,
     ],
   },
 ];
@@ -182,40 +210,37 @@ const Projects = () => {
   const [index, setIndex] = useState(0);
 
   return (
-    <div className="h-full bg-primary/30 py-36 flex items-center">
+    <div className='h-full bg-primary/30 py-36 flex items-center'>
       <Circles />
 
-      <div className="container mx-auto">
-        <div className="flex flex-col xl:flex-row gap-x-8">
-          <div className="text-center flex xl:w-[30vw] flex-col lg:text-left mb-4 xl:mb-0">
-            <Animated direction="up" duration={0.2} element="h2" className="h2 xl:mt-8">
+      <div className='container mx-auto'>
+        <div className='flex flex-col xl:flex-row gap-x-8'>
+          <div className='text-center flex xl:w-[30vw] flex-col lg:text-left mb-4 xl:mb-0'>
+            <Animated direction='up' duration={0.2} element='h2' className='h2 xl:mt-8'>
               <Link
-                className="group hover:text-accent transition-all duration-300 capitalize"
+                className='group hover:text-accent transition-all duration-300 capitalize'
                 href={projectsSlides[index].link}
-                target="_blank"
-              >
+                target='_blank'>
                 {`${projectsSlides[index].title.slice(0, -1)}`}
-                <span className="text-accent group-hover:text-white transition-all duration-300">
+                <span className='text-accent group-hover:text-white transition-all duration-300'>
                   {projectsSlides[index].title.slice(-1)}
                 </span>
               </Link>
             </Animated>
 
             <Animated
-              direction="up"
+              direction='up'
               duration={0.4}
-              element="div"
-              className="mb-4 max-w-[400px] mx-auto lg:mx-0"
-            >
-              <div className="flex gap-4 flex-wrap justify-center sm:justify-start">
+              element='div'
+              className='mb-4 max-w-[400px] mx-auto lg:mx-0'>
+              <div className='flex gap-4 flex-wrap justify-center sm:justify-start'>
                 {projectsSlides[index].stack.map((icon) => (
                   <div
-                    className="text-2xl text-white/60 cursor-pointer relative flex items-center group transition-all duration-300 hover:text-white"
-                    key={icon.key}
-                  >
+                    className='text-2xl text-white/60 cursor-pointer relative flex items-center group transition-all duration-300 hover:text-white'
+                    key={icon.key}>
                     {icon}
 
-                    <Tooltip theme="light" direction="left" text={icon.key} />
+                    <Tooltip theme='light' direction='left' text={icon.key} />
                   </div>
                 ))}
               </div>
@@ -223,46 +248,43 @@ const Projects = () => {
           </div>
 
           <Animated
-            direction="down"
+            direction='down'
             duration={0.6}
-            element="div"
-            className="w-full xl:max-w-[65%] overflow-hidden"
-          >
+            element='div'
+            className='w-full xl:max-w-[65%] overflow-hidden'>
             <Swiper
-              className="h-[200px] sm:h-[500px]"
+              className='h-[200px] sm:h-[500px]'
               spaceBetween={10}
               pagination={{ clickable: true }}
               modules={[Pagination]}
-              onSlideChange={({ activeIndex }) => setIndex(activeIndex)}
-            >
+              onSlideChange={({ activeIndex }) => setIndex(activeIndex)}>
               {projectsSlides.map(({ images }, index) => (
                 <SwiperSlide key={index}>
-                  <div className="grid grid-cols-2 grid-rows-2 gap-4 auto-rows-fr">
+                  <div className='grid grid-cols-2 grid-rows-2 gap-4 auto-rows-fr'>
                     {images.map(({ title, path }, imageIndex) => (
                       <div
-                        className="relative flex items-center justify-center w-full h-full max-h-[200px] min-h-[200px] sm:max-h-[225px] sm:min-h-[225px] group"
-                        key={path}
-                      >
-                        <div className="flex items-center justify-center relative h-full cursor-grab overflow-hidden group rounded-lg">
+                        className='relative flex items-center justify-center w-full h-full max-h-[200px] min-h-[200px] sm:max-h-[225px] sm:min-h-[225px] group'
+                        key={path}>
+                        <div className='flex items-center justify-center relative h-full cursor-grab overflow-hidden group rounded-lg'>
                           <Image
-                            className="pointer-events-none object-cover rounded-lg"
+                            className='pointer-events-none object-cover rounded-lg h-full'
                             src={path}
                             alt={title}
                             width={500}
                             height={300}
                           />
 
-                          <div className="absolute inset-0 bg-gradient-to-l from-transparent via-[#e838cc] to-[#4a22bd] opacity-0 group-hover:opacity-80 transition-all duration-700"></div>
+                          <div className='absolute inset-0 bg-gradient-to-l from-transparent via-[#e838cc] to-[#4a22bd] opacity-0 group-hover:opacity-80 transition-all duration-700'></div>
 
-                          <div className="absolute bottom-0 translate-y-full group-hover:bottom-[50%] transition-all duration-300">
-                            <div className="flex items-center gap-x-2 text-[13px] tracking-[0.2em]">
-                              <div className="delay-100">
+                          <div className='absolute bottom-0 translate-y-full group-hover:bottom-[50%] transition-all duration-300'>
+                            <div className='flex items-center gap-x-2 text-[13px] tracking-[0.2em]'>
+                              <div className='delay-100'>
                                 {`${String(imageIndex + 1)}:`.toUpperCase()}
                               </div>
-                              <div className="translate-y-[500%] group-hover:translate-y-0 transition-all duration-300 delay-150">
+                              <div className='translate-y-[500%] group-hover:translate-y-0 transition-all duration-300 delay-150'>
                                 {title.toUpperCase()}
                               </div>
-                              <div className="text-xl translate-y-[500%] group-hover:translate-y-0 transition-all duration-300 delay-200">
+                              <div className='text-xl translate-y-[500%] group-hover:translate-y-0 transition-all duration-300 delay-200'>
                                 <BsArrowRight />
                               </div>
                             </div>
