@@ -13,12 +13,15 @@ import {
   SiCypress,
   SiExpress,
   SiGreensock,
+  SiGulp,
+  SiJavascript,
   SiJest,
   SiMongodb,
   SiMui,
   SiNextdotjs,
   SiReacthookform,
   SiRedux,
+  SiSvg,
   SiSwiper,
   SiTailwindcss,
   SiTypescript,
@@ -29,24 +32,44 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 
 const projectsSlides = [
   {
+    title: 'cryptopia',
+    link: 'https://docs.google.com/document/d/1H48m4VXFgmI-EHlwNN8Y2zbuG0Ic2XcK6us4QOqaG2w/edit',
+    images: [
+      {
+        title: 'main',
+      },
+      {
+        title: 'auth',
+      },
+      {
+        title: 'list',
+      },
+      {
+        title: 'order',
+      },
+    ],
+    stack: [
+      <SiGulp key='Gulp' />,
+      <FaSass key='SASS' />,
+      <SiSvg key='SVG' />,
+      <SiJavascript key='JavaScript' />,
+    ],
+  },
+  {
     title: 'clevertec',
     link: 'https://websitetest.clevertech.by/',
     images: [
       {
         title: 'slider',
-        path: '/images/projects/clevertec/slider.jpg',
       },
       {
         title: 'tabs',
-        path: '/images/projects/clevertec/tabs.jpg',
       },
       {
         title: 'hover-list',
-        path: '/images/projects/clevertec/hover-list.jpg',
       },
       {
         title: 'mobile',
-        path: '/images/projects/clevertec/mobile.jpg',
       },
     ],
     stack: [
@@ -62,19 +85,15 @@ const projectsSlides = [
     images: [
       {
         title: 'home',
-        path: '/images/projects/portfolio/home.jpg',
       },
       {
         title: 'about',
-        path: '/images/projects/portfolio/about.jpg',
       },
       {
         title: 'projects',
-        path: '/images/projects/portfolio/projects2.jpg',
       },
       {
         title: 'mobile',
-        path: '/images/projects/portfolio/mobile.jpg',
       },
     ],
     stack: [
@@ -90,19 +109,15 @@ const projectsSlides = [
     images: [
       {
         title: 'registration',
-        path: '/images/projects/library/registration.jpg',
       },
       {
         title: 'home',
-        path: '/images/projects/library/home.jpg',
       },
       {
         title: 'booking',
-        path: '/images/projects/library/booking.jpg',
       },
       {
         title: 'account',
-        path: '/images/projects/library/account.jpg',
       },
     ],
     stack: [
@@ -117,24 +132,20 @@ const projectsSlides = [
     ],
   },
   {
-    title: 'simple game',
+    title: 'simple-game',
     link: 'https://willowy-elf-a25b99.netlify.app/',
     images: [
       {
         title: 'home',
-        path: '/images/projects/simple-game/home.jpg',
       },
       {
         title: 'transition',
-        path: '/images/projects/simple-game/transition.jpg',
       },
       {
         title: 'jump',
-        path: '/images/projects/simple-game/jump.jpg',
       },
       {
         title: 'box',
-        path: '/images/projects/simple-game/box.jpg',
       },
     ],
     stack: [
@@ -148,20 +159,16 @@ const projectsSlides = [
     link: 'https://incomparable-trifle-4b8624.netlify.app/',
     images: [
       {
-        title: 'home',
-        path: '/images/projects/memories/main.jpg',
+        title: 'main',
       },
       {
-        title: 'authorization',
-        path: '/images/projects/memories/auth.jpg',
+        title: 'auth',
       },
       {
         title: 'post',
-        path: '/images/projects/memories/post.jpg',
       },
       {
         title: 'search',
-        path: '/images/projects/memories/search.jpg',
       },
     ],
     stack: [
@@ -176,24 +183,20 @@ const projectsSlides = [
     ],
   },
   {
-    title: 'art shop',
+    title: 'art-shop',
     link: 'https://rolling-scopes-school.github.io/kvadratikk-REACT2022Q1/',
     images: [
       {
         title: 'home',
-        path: '/images/projects/art-shop/home.jpg',
       },
       {
         title: 'review',
-        path: '/images/projects/art-shop/review.jpg',
       },
       {
         title: 'filters',
-        path: '/images/projects/art-shop/filters.jpg',
       },
       {
         title: 'details',
-        path: '/images/projects/art-shop/details.jpg',
       },
     ],
     stack: [
@@ -221,7 +224,7 @@ const Projects = () => {
                 className='group hover:text-accent transition-all duration-300 capitalize'
                 href={projectsSlides[index].link}
                 target='_blank'>
-                {`${projectsSlides[index].title.slice(0, -1)}`}
+                {`${projectsSlides[index].title.slice(0, -1).replace('-', ' ')}`}
                 <span className='text-accent group-hover:text-white transition-all duration-300'>
                   {projectsSlides[index].title.slice(-1)}
                 </span>
@@ -258,17 +261,17 @@ const Projects = () => {
               pagination={{ clickable: true }}
               modules={[Pagination]}
               onSlideChange={({ activeIndex }) => setIndex(activeIndex)}>
-              {projectsSlides.map(({ images }, index) => (
+              {projectsSlides.map(({ title: project, images }, index) => (
                 <SwiperSlide key={index}>
                   <div className='grid grid-cols-2 grid-rows-2 gap-4 auto-rows-fr'>
-                    {images.map(({ title, path }, imageIndex) => (
+                    {images.map(({ title }, imageIndex) => (
                       <div
                         className='relative flex items-center justify-center w-full h-full max-h-[200px] min-h-[200px] sm:max-h-[225px] sm:min-h-[225px] group'
-                        key={path}>
-                        <div className='flex items-center justify-center relative h-full cursor-grab overflow-hidden group rounded-lg'>
+                        key={title}>
+                        <div className='flex items-center justify-center relative h-full cursor-grab overflow-hidden group rounded-lg w-full'>
                           <Image
-                            className='pointer-events-none object-cover rounded-lg h-full'
-                            src={path}
+                            className='pointer-events-none object-cover rounded-lg h-full w-full'
+                            src={`/images/projects/${project}/${title}.webp`}
                             alt={title}
                             width={500}
                             height={300}
