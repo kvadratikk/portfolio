@@ -50,6 +50,7 @@ const projectsSlides = [
     ],
     stack: [
       <SiGulp key='Gulp' />,
+      <FaHtml5 key='HTML' />,
       <FaSass key='SASS' />,
       <SiSvg key='SVG' />,
       <SiJavascript key='JavaScript' />,
@@ -104,7 +105,7 @@ const projectsSlides = [
     ],
   },
   {
-    title: 'Library',
+    title: 'library',
     link: 'https://scintillating-bublanina-d5cc9b.netlify.app/#/books/all',
     images: [
       {
@@ -213,7 +214,7 @@ const Projects = () => {
   const [index, setIndex] = useState(0);
 
   return (
-    <div className='h-full bg-primary/30 py-36 flex items-center'>
+    <div className='min-h-screen h-full bg-primary/30 py-36 flex items-center'>
       <Circles />
 
       <div className='container mx-auto'>

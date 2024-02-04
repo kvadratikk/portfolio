@@ -19,8 +19,8 @@
     "react-icons": "^4.8.0",
     "react-tsparticles": "^2.9.3",
     "sass": "^1.65.1",
+    "sharp": "^0.33.2",
     "swiper": "^9.4.0",
-    "tailwind-scrollbar": "^3.0.4",
     "tsparticles": "^2.9.3"
   },
   "devDependencies": {
@@ -28,6 +28,7 @@
     "eslint": "8.41.0",
     "eslint-config-next": "13.4.3",
     "postcss": "^8.4.23",
+    "tailwind-scrollbar": "^3.0.5",
     "tailwindcss": "^3.3.2"
   }
 }
