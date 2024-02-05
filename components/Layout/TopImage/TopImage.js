@@ -9,6 +9,7 @@ const TopImage = () => {
       height={400}
       alt=''
       fetchPriority='high'
+      priority
     />
   );
 };

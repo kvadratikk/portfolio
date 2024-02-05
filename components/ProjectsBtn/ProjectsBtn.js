@@ -15,6 +15,7 @@ const ProjectsBtn = () => {
           width={141}
           height={148}
           fetchPriority='high'
+          priority
         />
         <HiArrowRight className='absolute text-4xl group-hover:translate-x-2 transition-all duration-300' />
       </Link>

@@ -168,7 +168,7 @@ const About = () => {
         <Avatar className='-scale-x-100 scale-y-100' />
       </Animated>
 
-      <div className='container mx-auto max-h-screen h-full flex flex-col items-center xl:flex-row gap-x-6'>
+      <div className='container mx-auto h-full flex flex-col items-center xl:flex-row gap-x-6'>
         <div className='flex-1 flex flex-col justify-center'>
           <Animated className='h2' element='h2' direction='right' duration={0.2}>
             Creator of <span className='text-accent'>user-friendly</span> web applications.
