@@ -6,11 +6,9 @@ const Tooltip = ({ theme, direction, text }) => {
 
   return (
     <div
-      className={`absolute ${p} ${position} hidden xl:group-hover:flex rounded-[3px] z-10 w-max`}
-    >
+      className={`absolute ${p} ${position} hidden xl:group-hover:flex rounded-[3px] z-10 w-max`}>
       <span
-        className={`${bg} relative flex ${color} items-center p-[6px] text-[12px] leading-none font-semibold capitalize`}
-      >
+        className={`${bg} relative flex ${color} items-center p-[6px] text-[12px] leading-none font-semibold capitalize`}>
         {text}
 
         {direction === 'right' ? (

@@ -18,7 +18,7 @@ const transitionVariants = {
 const TransitionScreen = ({ bg, zIndex, delay }) => {
   return (
     <motion.div
-      className={`fixed top-0 bottom-0 right-full w-screen h-screen ${zIndex} ${bg}`}
+      className={`absolute top-0 bottom-0 right-full w-screen h-screen ${zIndex} ${bg}`}
       variants={transitionVariants}
       transition={{ delay, duration: 0.6, ease: 'easeInOut' }}
       initial='initial'

@@ -10,7 +10,6 @@ import { BsArrowRight } from 'react-icons/bs';
 import { FaHtml5, FaNodeJs, FaReact, FaSass } from 'react-icons/fa';
 import {
   SiAxios,
-  SiCypress,
   SiExpress,
   SiGreensock,
   SiGulp,
@@ -104,34 +103,34 @@ const projectsSlides = [
       <TbBrandFramerMotion key='Framer-Motion' />,
     ],
   },
-  {
-    title: 'library',
-    link: 'https://scintillating-bublanina-d5cc9b.netlify.app/#/books/all',
-    images: [
-      {
-        title: 'registration',
-      },
-      {
-        title: 'home',
-      },
-      {
-        title: 'booking',
-      },
-      {
-        title: 'account',
-      },
-    ],
-    stack: [
-      <SiTypescript key='TypeScript' />,
-      <FaReact key='React' />,
-      <SiRedux key='Redux Toolkit' />,
-      <SiReacthookform key='React Hook Form' />,
-      <SiAxios key='Axios' />,
-      <SiSwiper key='Swiper' />,
-      <FaSass key='SASS' />,
-      <SiCypress key='Cypress' />,
-    ],
-  },
+  // {
+  //   title: 'library',
+  //   link: 'https://scintillating-bublanina-d5cc9b.netlify.app/#/books/all',
+  //   images: [
+  //     {
+  //       title: 'registration',
+  //     },
+  //     {
+  //       title: 'home',
+  //     },
+  //     {
+  //       title: 'booking',
+  //     },
+  //     {
+  //       title: 'account',
+  //     },
+  //   ],
+  //   stack: [
+  //     <SiTypescript key='TypeScript' />,
+  //     <FaReact key='React' />,
+  //     <SiRedux key='Redux Toolkit' />,
+  //     <SiReacthookform key='React Hook Form' />,
+  //     <SiAxios key='Axios' />,
+  //     <SiSwiper key='Swiper' />,
+  //     <FaSass key='SASS' />,
+  //     <SiCypress key='Cypress' />,
+  //   ],
+  // },
   {
     title: 'simple-game',
     link: 'https://willowy-elf-a25b99.netlify.app/',
