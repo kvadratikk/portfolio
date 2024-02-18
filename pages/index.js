@@ -4,6 +4,7 @@ import Animated from '../components/Animated/Animated';
 import Avatar from '../components/Avatar/Avatar';
 import ParticlesContainer from '../components/ParticlesContainer/ParticlesContainer';
 import ProjectsBtn from '../components/ProjectsBtn/ProjectsBtn';
+import { DURATION_DEFAULT } from '../constants/animation';
 import { SCREENS } from '../constants/screens';
 
 const Home = () => {
@@ -13,7 +14,7 @@ const Home = () => {
     <div className='min-h-screen h-full bg-primary/60'>
       <div className='w-full min-h-screen h-full bg-gradient-to-r from-primary/10 via-black/30 to-black/10'>
         <div className='text-center flex flex-col justify-center xl:pt-[20%] xl:justify-start xl:text-left min-h-screen h-full container mx-auto'>
-          <Animated element='h1' direction='down' duration={0.2} className='h1 z-10'>
+          <Animated element='h1' direction='down' duration={DURATION_DEFAULT} className='h1 z-10'>
             <span className='text-accent'>Uladzislava Ryzhova</span> <br />
             Frontend Developer
           </Animated>
@@ -22,7 +23,11 @@ const Home = () => {
             <ProjectsBtn />
           </div>
 
-          <Animated className='hidden xl:flex' element='div' direction='down' duration={0.4}>
+          <Animated
+            className='hidden xl:flex'
+            element='div'
+            direction='down'
+            duration={DURATION_DEFAULT}>
             <ProjectsBtn />
           </Animated>
         </div>
@@ -35,7 +40,7 @@ const Home = () => {
           className='h-full max-w-[737px] max-h-[780px] absolute -bottom-32 lg:bottom-0 lg:right-[14%]'
           element='div'
           direction='up'
-          duration={0.5}
+          duration={DURATION_DEFAULT}
           transition={{ duration: 1, ease: 'easeInOut' }}>
           {isXl && <Avatar />}
         </Animated>

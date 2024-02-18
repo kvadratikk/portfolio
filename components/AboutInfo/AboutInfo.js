@@ -30,6 +30,7 @@ import {
   SiWebpack,
 } from 'react-icons/si';
 import { TbBrandFramerMotion } from 'react-icons/tb';
+import { DURATION_DEFAULT } from '../../constants/animation';
 
 const aboutData = [
   {
@@ -156,7 +157,7 @@ const AboutInfo = () => {
     <Animated
       element='div'
       direction='left'
-      duration={0.4}
+      duration={DURATION_DEFAULT}
       className='flex flex-col w-full xl:max-w-[48%] h-[480px] xl:pr-20'>
       <div className='flex gap-4 xl:gap-x-8 mx-auto xl:mx-0 mb-4 flex-wrap'>
         {aboutData.map(({ title }, itemIndex) => (

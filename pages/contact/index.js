@@ -7,6 +7,7 @@ import Circles from '../../components/Circles/Circles';
 const Modal = dynamic(() => import('../../components/Modal/Modal'));
 
 import { useEffect, useState } from 'react';
+import { DURATION_DEFAULT } from '../../constants/animation';
 
 const Contact = () => {
   const [modalText, setModalText] = useState('');
@@ -49,13 +50,17 @@ const Contact = () => {
       {modalText && <Modal text={modalText} />}
       <div className='container mx-auto py-32 text-center xl:text-left flex items-center justify-center min-h-screen h-full'>
         <div className='flex flex-col w-full max-w-[700px]'>
-          <Animated className='h2 text-center mb-12' element='h2' direction='up' duration={0.2}>
+          <Animated
+            className='h2 text-center mb-12'
+            element='h2'
+            direction='up'
+            duration={DURATION_DEFAULT}>
             Let&apos;s <span className='text-accent'>connect</span>
           </Animated>
 
           <Animated
             element='form'
-            duration={0.4}
+            duration={DURATION_DEFAULT}
             direction='up'
             noValidate
             onSubmit={handleFormSubmit}>

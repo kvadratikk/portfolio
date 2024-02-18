@@ -28,6 +28,7 @@ import {
 import { TbBrandFramerMotion } from 'react-icons/tb';
 import { Pagination } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { DURATION_DEFAULT } from '../../constants/animation';
 
 const projectsSlides = [
   {
@@ -218,7 +219,11 @@ const Projects = () => {
       <div className='container mx-auto'>
         <div className='flex flex-col xl:flex-row gap-x-8'>
           <div className='text-center flex xl:w-[30vw] flex-col lg:text-left mb-4 xl:mb-0'>
-            <Animated direction='up' duration={0.2} element='h2' className='h2 xl:mt-8'>
+            <Animated
+              direction='up'
+              duration={DURATION_DEFAULT}
+              element='h2'
+              className='h2 xl:mt-8'>
               <Link
                 className='group hover:text-accent transition-all duration-300 capitalize'
                 href={projectsSlides[index].link}
@@ -232,7 +237,7 @@ const Projects = () => {
 
             <Animated
               direction='up'
-              duration={0.4}
+              duration={DURATION_DEFAULT}
               element='div'
               className='mb-4 max-w-[400px] mx-auto lg:mx-0'>
               <div className='flex gap-4 flex-wrap justify-center sm:justify-start'>
@@ -251,7 +256,7 @@ const Projects = () => {
 
           <Animated
             direction='down'
-            duration={0.6}
+            duration={DURATION_DEFAULT}
             element='div'
             className='w-full xl:max-w-[65%] overflow-hidden'>
             <Swiper
