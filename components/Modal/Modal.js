@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { createPortal } from 'react-dom';
 
 const Modal = ({ text }) => {
@@ -12,7 +12,7 @@ const Modal = ({ text }) => {
 
   if (isMounted && ref.current)
     return createPortal(
-      <div className="absolute top-[10%] left-[50%] text-2xl text-primary bg-white p-[20px] -translate-x-[50%] rounded-lg">
+      <div className='absolute top-[10%] left-[50%] text-2xl text-primary bg-white p-[20px] -translate-x-[50%] rounded-lg'>
         {text}
       </div>,
       ref.current,

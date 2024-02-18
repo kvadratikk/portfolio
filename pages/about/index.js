@@ -1,9 +1,9 @@
 import CountUp from 'react-countup';
+
+import AboutInfo from '../../components/AboutInfo/AboutInfo';
 import Animated from '../../components/Animated/Animated';
 import Avatar from '../../components/Avatar/Avatar';
 import Circles from '../../components/Circles/Circles';
-
-import AboutInfo from '../../components/AboutInfo/AboutInfo';
 import { DURATION_DEFAULT } from '../../constants/animation';
 import { SCREENS } from '../../constants/screens';
 import useScreens from '../../hooks/useScreens';

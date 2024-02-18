@@ -1,11 +1,10 @@
-import useScreens from '../hooks/useScreens';
-
 import Animated from '../components/Animated/Animated';
 import Avatar from '../components/Avatar/Avatar';
 import ParticlesContainer from '../components/ParticlesContainer/ParticlesContainer';
 import ProjectsBtn from '../components/ProjectsBtn/ProjectsBtn';
 import { DURATION_DEFAULT } from '../constants/animation';
 import { SCREENS } from '../constants/screens';
+import useScreens from '../hooks/useScreens';
 
 const Home = () => {
   const isXl = useScreens(SCREENS.xl);

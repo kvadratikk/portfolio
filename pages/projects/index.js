@@ -1,10 +1,5 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import Animated from '../../components/Animated/Animated';
-import Bulb from '../../components/Bulb/Bulb';
-import Circles from '../../components/Circles/Circles';
-import Tooltip from '../../components/Tooltip/Tooltip';
-
 import { useState } from 'react';
 import { BsArrowRight } from 'react-icons/bs';
 import { FaHtml5, FaNodeJs, FaReact, FaSass } from 'react-icons/fa';
@@ -28,6 +23,11 @@ import {
 import { TbBrandFramerMotion } from 'react-icons/tb';
 import { Pagination } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
+
+import Animated from '../../components/Animated/Animated';
+import Bulb from '../../components/Bulb/Bulb';
+import Circles from '../../components/Circles/Circles';
+import Tooltip from '../../components/Tooltip/Tooltip';
 import { DURATION_DEFAULT } from '../../constants/animation';
 
 const projectsSlides = [

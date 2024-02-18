@@ -1,7 +1,7 @@
 import Link from 'next/link';
-import Tooltip from '../../Tooltip/Tooltip';
-
 import { useRouter } from 'next/router';
+
+import Tooltip from '../../Tooltip/Tooltip';
 
 const NavLink = ({ name, path, icon }) => {
   const { pathname } = useRouter();
@@ -11,9 +11,8 @@ const NavLink = ({ name, path, icon }) => {
       className={`${
         `/${path ?? name}` === pathname ? 'text-accent' : ''
       } relative flex items-center group hover:text-accent transition-all duration-300`}
-      href={`/${path ?? name}`}
-    >
-      <Tooltip text={name} theme="light" direction="right" />
+      href={`/${path ?? name}`}>
+      <Tooltip text={name} theme='light' direction='right' />
 
       {icon}
     </Link>

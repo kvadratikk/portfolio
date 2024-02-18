@@ -1,12 +1,14 @@
 import emailjs from '@emailjs/browser';
 import dynamic from 'next/dynamic';
 import { BsArrowRight } from 'react-icons/bs';
+
 import Animated from '../../components/Animated/Animated';
 import Circles from '../../components/Circles/Circles';
 
 const Modal = dynamic(() => import('../../components/Modal/Modal'));
 
 import { useEffect, useState } from 'react';
+
 import { DURATION_DEFAULT } from '../../constants/animation';
 
 const Contact = () => {

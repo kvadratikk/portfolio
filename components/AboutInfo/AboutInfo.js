@@ -1,9 +1,5 @@
 import Link from 'next/link';
 import { useState } from 'react';
-
-import Animated from '../../components/Animated/Animated';
-import Tooltip from '../../components/Tooltip/Tooltip';
-
 import { FaCss3, FaGithub, FaHtml5, FaNodeJs, FaReact, FaSass } from 'react-icons/fa';
 import {
   SiAxios,
@@ -30,6 +26,9 @@ import {
   SiWebpack,
 } from 'react-icons/si';
 import { TbBrandFramerMotion } from 'react-icons/tb';
+
+import Animated from '../../components/Animated/Animated';
+import Tooltip from '../../components/Tooltip/Tooltip';
 import { DURATION_DEFAULT } from '../../constants/animation';
 
 const aboutData = [

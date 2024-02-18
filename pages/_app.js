@@ -1,15 +1,13 @@
-import Head from 'next/head';
-import Layout from '../components/Layout/Layout';
-
-import { motion } from 'framer-motion';
-import { useRouter } from 'next/router';
-
-import Transition from '../components/Transition/Transition';
-
-import '../styles/globals.css';
-
 import 'swiper/css';
 import 'swiper/css/pagination';
+import '../styles/globals.css';
+
+import { motion } from 'framer-motion';
+import Head from 'next/head';
+import { useRouter } from 'next/router';
+
+import Layout from '../components/Layout/Layout';
+import Transition from '../components/Transition/Transition';
 
 function MyApp({ Component, pageProps }) {
   const { route } = useRouter();

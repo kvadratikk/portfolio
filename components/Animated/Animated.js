@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { useMemo } from 'react';
+
 import { fadeIn } from '../../variants';
 
 const Animated = ({
@@ -17,12 +18,11 @@ const Animated = ({
     <DynamicMotionComponent
       className={className}
       variants={fadeIn(direction, duration)}
-      initial="hidden"
-      animate="show"
-      exit="hidden"
+      initial='hidden'
+      animate='show'
+      exit='hidden'
       transition={transition}
-      {...attributes}
-    >
+      {...attributes}>
       {children}
     </DynamicMotionComponent>
   );
