@@ -18,7 +18,7 @@ const About = () => {
         className='hidden xl:flex absolute bottom-0 -left-[400px] h-full max-w-[737px] max-h-[780px] mix-blend-soft-light'
         direction='right'
         duration={0.2}>
-        <Avatar className='-scale-x-100 scale-y-100' />
+        <Avatar className='-scale-x-100' />
       </Animated>
 
       <div className='container mx-auto h-full flex flex-col items-center xl:flex-row gap-x-6'>

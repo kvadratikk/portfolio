@@ -1,9 +1,14 @@
+import useScreens from '../hooks/useScreens';
+
 import Animated from '../components/Animated/Animated';
 import Avatar from '../components/Avatar/Avatar';
 import ParticlesContainer from '../components/ParticlesContainer/ParticlesContainer';
 import ProjectsBtn from '../components/ProjectsBtn/ProjectsBtn';
+import { SCREENS } from '../constants/screens';
 
 const Home = () => {
+  const isXl = useScreens(SCREENS.xl);
+
   return (
     <div className='min-h-screen h-full bg-primary/60'>
       <div className='w-full min-h-screen h-full bg-gradient-to-r from-primary/10 via-black/30 to-black/10'>
@@ -25,16 +30,14 @@ const Home = () => {
 
       <div className='w-full h-full absolute right-0 bottom-0'>
         <div className='bg-none xl:bg-explosion xl:bg-cover xl:bg-right xl:bg-no-repeat w-full h-full absolute mix-blend-color-dodge translate-z-0'></div>
-
         <ParticlesContainer />
-
         <Animated
           className='h-full max-w-[737px] max-h-[780px] absolute -bottom-32 lg:bottom-0 lg:right-[14%]'
           element='div'
           direction='up'
           duration={0.5}
           transition={{ duration: 1, ease: 'easeInOut' }}>
-          <Avatar />
+          {isXl && <Avatar />}
         </Animated>
       </div>
     </div>

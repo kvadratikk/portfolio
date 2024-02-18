@@ -1,20 +1,17 @@
-/* eslint-disable react/display-name */
 import Image from 'next/image';
 
-import { memo } from 'react';
-
-const Avatar = memo(({ className }) => {
+const Avatar = ({ className }) => {
   return (
     <Image
-      src='/images/avatar.png'
+      src='/images/avatar.webp'
       alt='avatar'
       fetchPriority='high'
       priority
       width={737}
       height={780}
-      className={`translate-z-0 w-full h-full hidden xl:flex xl:max-w-none ${className}`}
+      className={`translate-z-0 h-full ${className || ''}`}
     />
   );
-});
+};
 
 export default Avatar;
